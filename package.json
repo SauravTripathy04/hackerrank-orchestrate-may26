@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node code/index.js",
+    "live": "node code/index.js",
+    "web": "node code/server.js",
     "scrape": "node code/scraper.js",
     "batch": "node code/batch.js"
   },
@@ -16,6 +18,8 @@
     "cheerio": "^1.0.0",
     "csv-parser": "^3.2.0",
     "csv-writer": "^1.6.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "express": "^4.18.4"
   }
 }
+

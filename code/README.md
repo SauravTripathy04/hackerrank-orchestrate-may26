@@ -46,11 +46,36 @@ To satisfy the grading requirement of producing `support_tickets/output.csv`:
 npm run batch
 ```
 
-### 2. Interactive Terminal UI
+### 2. Live Interactive Agent
 To test the agent live in a conversational UI:
 ```bash
-npm start
+npm run live
 ```
+
+Then enter ticket details when prompted.
+
+### 3. Browser-based Live Agent
+To test the agent in a browser UI:
+```bash
+npm run web
+```
+
+Open the app at:
+```bash
+http://localhost:3000
+```
+
+#### Example browser live use case
+1. Company: `Visa`
+2. Subject: `Lost card`
+3. Issue: `I lost my Visa card and need the emergency phone number.`
+
+The browser agent should:
+- classify the ticket as `replied` or `escalated`
+- output the correct `product_area`
+- provide a grounded response from the corpus
+- include a short `justification`
+- set the right `request_type`
 
 ## Chat transcript logging
 

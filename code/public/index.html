@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Orchestrator Live Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Incident Orchestrator</h1>
+      <p>Live support triage agent for HackerRank, Claude, and Visa.</p>
+    </header>
+
+    <section class="card">
+      <form id="ticket-form">
+        <label for="company">Company</label>
+        <select id="company" name="company">
+          <option value="None">None</option>
+          <option value="HackerRank">HackerRank</option>
+          <option value="Claude">Claude</option>
+          <option value="Visa">Visa</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Ticket subject" />
+
+        <label for="issue">Issue</label>
+        <textarea id="issue" name="issue" rows="5" placeholder="Describe the ticket..." required></textarea>
+
+        <button type="submit">Send to Live Agent</button>
+      </form>
+    </section>
+
+    <section class="card" id="result-card" hidden>
+      <h2>Live Agent Result</h2>
+      <div class="result-row"><strong>Status:</strong> <span id="status"></span></div>
+      <div class="result-row"><strong>Product Area:</strong> <span id="product_area"></span></div>
+      <div class="result-row"><strong>Request Type:</strong> <span id="request_type"></span></div>
+      <div class="result-row"><strong>Response:</strong><p id="response"></p></div>
+      <div class="result-row"><strong>Justification:</strong><p id="justification"></p></div>
+    </section>
+
+    <section class="card">
+      <h2>Example Use Case</h2>
+      <p>Share this URL with others after starting the app locally at:</p>
+      <code>http://localhost:3000</code>
+      <p>Example ticket:</p>
+      <ul>
+        <li>Company: <strong>Visa</strong></li>
+        <li>Subject: <strong>Lost card</strong></li>
+        <li>Issue: <strong>I lost my Visa card and need the emergency phone number.</strong></li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
